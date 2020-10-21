@@ -3,12 +3,12 @@ It is a key-exchange system and is a variant of the Diffie-Hellman protocol. It 
 
 ## Working
 
-Consider two parties Alice and Bob who want to share a secret with each other. They use the elliptic curve given by x^3 + ax + b mod p. 
-Alice sends Bob her public key: N_alice * P, where N_alice is an integer(which should be very large for good reasons) and is Alice's private key and P is a point on the curve above.
-Bob also sends his public key :N_bob * P, to Alice.
+Consider two parties Alice and Bob who want to share a secret with each other. They use the elliptic curve given by x<sup>3</sup> + ax + b mod p. 
+Alice sends Bob her public key: N<sub>alice</sub> * P, where N<sub>alice</sub> is an integer(which should be very large for good reasons) and is Alice's private key and P is a point on the curve above.
+Bob also sends his public key :N<sub>bob</sub> * P, to Alice.
 
-Bob, upon receiving Alice's public key, calculates the shared key or secret by multiplying his private key to it. Hence the shared secret is N_bob*(N_alice * P).
-Similarly, Alice calculates the shared secret : N_alice*(N_bob * P)
+Bob, upon receiving Alice's public key, calculates the shared key or secret by multiplying his private key to it. Hence the shared secret is N<sub>bob</sub>*(N<sub>alice</sub> * P).
+Similarly, Alice calculates the shared secret : N<sub>alice</sub>*(N<sub>bob</sub> * P)
 
 It can be seen easily that the two calculated shared secrets are the same.
 
